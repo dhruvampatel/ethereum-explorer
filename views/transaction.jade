@@ -174,7 +174,7 @@ block contents
 
         self.isContractCreation = (tx.input.indexOf('0x6060604052') === 0);
 
-        //-  console.log(tx);
+        console.log(tx);
         tx.transactionPrice = web3.fromWei(tx.gas * tx.gasPrice, 'ether').toString(10) + ' ETH';
 
         if(tx.value > 0) tx.value_eth = ' (' +  web3.fromWei(tx.value, 'ether').toString(10) + ' ETH)';
